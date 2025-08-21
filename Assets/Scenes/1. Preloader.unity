@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 16717596}
   - component: {fileID: 16717599}
   - component: {fileID: 16717600}
+  - component: {fileID: 16717601}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -202,7 +203,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -226,11 +227,11 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1243784531}
   toggleTransition: 1
   graphic: {fileID: 46343315}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 256924707}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!114 &16717599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +266,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &16717601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16717594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 16717600}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Normal
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &46343313
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,6 +618,7 @@ GameObject:
   - component: {fileID: 363770566}
   - component: {fileID: 363770567}
   - component: {fileID: 363770568}
+  - component: {fileID: 363770569}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Untagged
@@ -635,7 +666,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -659,11 +690,11 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1985973141}
   toggleTransition: 1
   graphic: {fileID: 381400325}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 256924707}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!114 &363770566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,6 +749,35 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &363770569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363770561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 363770567}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Normal
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &381400323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1186,7 @@ GameObject:
   - component: {fileID: 665512449}
   - component: {fileID: 665512452}
   - component: {fileID: 665512453}
+  - component: {fileID: 665512454}
   m_Layer: 0
   m_Name: Home
   m_TagString: Untagged
@@ -1193,7 +1254,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1217,11 +1278,11 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   toggleTransition: 1
   graphic: {fileID: 1653632817}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 256924707}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!114 &665512452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1256,6 +1317,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &665512454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665512447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 665512453}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Normal
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &810778800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1392,7 @@ GameObject:
   - component: {fileID: 879095463}
   - component: {fileID: 879095466}
   - component: {fileID: 879095467}
+  - component: {fileID: 879095468}
   m_Layer: 0
   m_Name: Locked 2
   m_TagString: Untagged
@@ -1369,7 +1460,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1393,7 +1484,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1121531057}
   toggleTransition: 1
   graphic: {fileID: 624376389}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 256924707}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1432,6 +1523,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &879095468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879095461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 879095467}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Normal
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &981183499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,7 +2720,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2628,7 +2748,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!95 &1958841130
 Animator:
   serializedVersion: 5
