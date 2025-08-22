@@ -1,48 +1,76 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
-using System.Linq;
+using UnityEngine.UI;
+
+[System.Serializable] public class StringEvent : UnityEvent<string> {}
 
 public class BottomBarView : MonoBehaviour
 {
-    [System.Serializable]
-    public struct NavItem
-    {
-        public Toggle toggle;     // assign the Toggle
-        public string contentId;  // e.g. "Home", "Shop", "Map", "Locked1", "Locked2"
-    }
+    [Header("Assign your 5 nav toggles (scene instances)")]
+    public List<Toggle> toggles = new List<Toggle>();
 
-    public ToggleGroup toggleGroup;
-    public NavItem[] items;
+    [Header("Events required by assignment")]
+    public StringEvent ContentActivated;   // passes the selected button's id/name
+    public UnityEvent Closed;              // fired when all toggles are off
 
-    [System.Serializable] public class ContentActivatedEvent : UnityEvent<string> {}
-    public ContentActivatedEvent ContentActivated; // fires with the contentId string
-    public UnityEvent Closed;                      // fires when all toggles are off
+    ToggleGroup group;
 
     void Awake()
     {
-        // keep whatever you set in the inspector (allow switch off or not)
-        foreach (var it in items)
-        {
-            var captured = it;
-            if (!captured.toggle) continue;
+        // Ensure a ToggleGroup so only one can be on (but allow none).
+        group = GetComponent<ToggleGroup>();
+        if (!group) group = gameObject.AddComponent<ToggleGroup>();
+        group.allowSwitchOff = true;
 
-            captured.toggle.group = toggleGroup;
-            captured.toggle.onValueChanged.AddListener(isOn =>
-            {
-                if (isOn) ContentActivated.Invoke(captured.contentId);
-                else if (AllOff()) Closed.Invoke();
-            });
-        }
+        foreach (var t in toggles)
+            if (t) t.group = group;
+    }
 
-        // initial fire
-        if (AllOff()) Closed.Invoke();
-        else
+    void OnEnable()
+    {
+        foreach (var t in toggles)
+            if (t) t.onValueChanged.AddListener(OnAnyChanged);
+
+        // Sync animators & fire initial state on enable
+        SyncAnimators();
+        FireEvents();
+    }
+
+    void OnDisable()
+    {
+        foreach (var t in toggles)
+            if (t) t.onValueChanged.RemoveListener(OnAnyChanged);
+    }
+
+    void OnAnyChanged(bool _)
+    {
+        SyncAnimators();
+        FireEvents();
+    }
+
+    void SyncAnimators()
+    {
+        // Drive each button's Animator bool "On" from its Toggle.isOn
+        foreach (var t in toggles)
         {
-            var on = items.FirstOrDefault(i => i.toggle && i.toggle.isOn);
-            if (on.toggle) ContentActivated.Invoke(on.contentId);
+            if (!t) continue;
+            var anim = t.GetComponent<Animator>();
+            if (anim) anim.SetBool("On", t.isOn);
         }
     }
 
-    bool AllOff() => items.All(i => !i.toggle || !i.toggle.isOn);
+    void FireEvents()
+    {
+        // Find first ON toggle; if none, fire Closed
+        foreach (var t in toggles)
+        {
+            if (t && t.isOn)
+            {
+                ContentActivated?.Invoke(t.gameObject.name); // or your own ID
+                return;
+            }
+        }
+        Closed?.Invoke();
+    }
 }
