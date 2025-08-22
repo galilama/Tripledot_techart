@@ -36,7 +36,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Toggle
+    m_ConditionEvent: On
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1832386122856502974}
@@ -87,8 +87,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Toggle
+  - m_ConditionMode: 2
+    m_ConditionEvent: On
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7035781766522194607}
@@ -113,8 +113,8 @@ AnimatorController:
   m_Name: On
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Toggle
-    m_Type: 9
+  - m_Name: On
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
@@ -143,10 +143,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -7035781766522194607}
-    m_Position: {x: 251.56693, y: 255.93956, z: 0}
+    m_Position: {x: -100, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1832386122856502974}
-    m_Position: {x: -50, y: 250, z: 0}
+    m_Position: {x: 170, y: 250, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
