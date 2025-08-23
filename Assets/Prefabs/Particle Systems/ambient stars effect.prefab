@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8837672343613648306}
   - component: {fileID: 8989306394815462789}
   - component: {fileID: 188804179309420755}
-  - component: {fileID: 7283035859602194876}
+  - component: {fileID: 2116846757131354978}
   m_Layer: 0
   m_Name: ambient stars effect
   m_TagString: Untagged
@@ -4844,7 +4844,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8003297025237824839}
   m_CullTransparentMesh: 1
---- !u!114 &7283035859602194876
+--- !u!114 &2116846757131354978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4867,7 +4867,7 @@ MonoBehaviour:
   m_IsTrail: 0
   m_IgnoreCanvasScaler: 0
   m_AbsoluteMode: 0
-  m_Scale3D: {x: 314.5, y: 314.5, z: 314.5}
+  m_Scale3D: {x: 336.15, y: 336.15, z: 336.15}
   m_AnimatableProperties: []
   m_Particles:
   - {fileID: 8837672343613648306}
