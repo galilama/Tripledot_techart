@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 54780de7674408342b2e053e44b541e8, type: 3}
+    - target: {fileID: 3734874440935102194, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 62
+      objectReference: {fileID: 0}
     - target: {fileID: 4990112330084789171, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
       propertyPath: m_Name
       value: Nav Button Map Variant
@@ -101,6 +105,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6822860230947944324, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822860230947944324, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
       propertyPath: m_SizeDelta.x
       value: 134.0703
       objectReference: {fileID: 0}
@@ -110,11 +118,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822860230947944324, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.000012715657
       objectReference: {fileID: 0}
     - target: {fileID: 6822860230947944324, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -30.18
+      value: -111.1281
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822860230947944324, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8840061536696355448, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
       propertyPath: m_text
