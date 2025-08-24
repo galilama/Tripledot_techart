@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nav Button Locked Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5327915724272980946, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1365ff4ccce68604091c20908112a70f, type: 2}
     - target: {fileID: 6509749489200869161, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
