@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nav Button Map Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5327915724272980946, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8c2dbbfebc179e44aad6691d2f798bb6, type: 2}
     - target: {fileID: 6509749489200869161, guid: 7fd188a94ae5e1a40a59466161941d27, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

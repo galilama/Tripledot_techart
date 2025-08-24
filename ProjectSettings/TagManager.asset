@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 3371972095
+    locked: 0
+  - name: Particles
+    uniqueID: 2145249169
+    locked: 0
+  - name: UI
+    uniqueID: 3881909605
+    locked: 0
+  - name: Popup
+    uniqueID: 830159141
+    locked: 0
